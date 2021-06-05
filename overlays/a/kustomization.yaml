@@ -1,7 +1,7 @@
 bases:
-- ../../base
+  - ../../base
 patches:
-- deployment.yaml
+  - deployment.yaml
 configMapGenerator:
   - name: nginx-conf
     files:

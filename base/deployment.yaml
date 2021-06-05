@@ -26,7 +26,19 @@ spec:
         - mountPath: /etc/nginx/nginx.conf
           name: nginx-config
           subPath: nginx.conf
+        - mountPath: /usr/share/nginx/html/index.html
+          name: custom-html
+          subPath: index.html
+        - mountPath: /usr/share/nginx/html/app.js
+          name: custom-js
+          subPath: app.js
       volumes:
       - name: nginx-config
         configMap:
           name: nginx-conf
+      - name: custom-html
+        configMap:
+          name: html
+      - name: custom-js
+        configMap:
+          name: js
